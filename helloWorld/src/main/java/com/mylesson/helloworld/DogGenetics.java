@@ -29,7 +29,7 @@ public class DogGenetics {
             String breed = "";
             breed = breeds[i];
             if (i != 4) {
-                breedPercent = rng.nextInt()
+                breedPercent = rng.nextInt();
             }
         }
     }
