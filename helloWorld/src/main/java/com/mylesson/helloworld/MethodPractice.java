@@ -11,18 +11,28 @@ package com.mylesson.helloworld;
  */
 public class MethodPractice {
     public static void main(String[] args) {
-        
+        int y = 1;
+        int x = 2;
+        randomVariable(y, x);
+        System.out.println(randomVariable(y, x));
+        int num = randomVariable(y, x);
+        System.out.println(num);
+        nothing();
+        colors("blue");
+        System.out.println(colors("yellow"));
     } 
     
     public static int randomVariable(int a, int b) {
         return a;
+       
     }
     
     public static String colors(String yellow) {
+        System.out.println("red");
         return yellow;
     }
     
     public static void nothing() {
-        
+        System.out.println("hello");
     }
 }

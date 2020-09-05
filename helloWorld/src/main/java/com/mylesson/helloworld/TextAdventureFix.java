@@ -63,11 +63,11 @@ public class TextAdventureFix {
             System.out.println("which direction do you choose?");
             stringOperand1 = myScanner.nextLine();
         }
-        if (stringOperand1.equals("sout")) {
+        if (stringOperand1.equals("south")) {
             System.out.println("i know you're a brave knight and all but you really chose the haunted castle? GAME OVER");
             System.exit(0);
         } else if (stringOperand1.equals("east")) {
-            System.out.println("The audacity! Trying to vacation on the job? turns out it was an illusion made by Marlock's evil magic.  He lured you into a dungeon to ne imprisoned forever. GAME OVER");
+            System.out.println("The audacity! Trying to vacation on the job? turns out it was an illusion made by Marlock's evil magic.  He lured you into a dungeon to be imprisoned forever. GAME OVER");
             System.exit(0);
         } else if (stringOperand1.equals("north")) {
             System.out.println("You navigate the cave system expertly and find Marlock awaiting you on a cliff.");
