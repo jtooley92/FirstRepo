@@ -25,12 +25,17 @@ public class DogGenetics {
         name = myScanner.nextLine();
         System.out.println("Well then i have this highly reliable report on " + name + "'s  prestigious background right here." + "\n" + name + " is:");
         
-        for(int i=0; i<5; i++) {
+        for (int i = 0; i < 5; i++) {
             String breed = "";
             breed = breeds[i];
             if (i != 4) {
-                breedPercent = rng.nextInt();
+                breedPercent = rng.nextInt(fullPercentBreed);
+                fullPercentBreed -= breedPercent;
+            } else {
+                breedPercent = fullPercentBreed;
             }
+            System.out.println(breedPercent + "% " + breed + ":");
         }
+        System.out.println("WOW, that's QUITE the dog!!");
     }
 }
