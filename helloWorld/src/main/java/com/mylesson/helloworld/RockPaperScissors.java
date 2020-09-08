@@ -14,18 +14,19 @@ import java.util.Scanner;
  */
 public class RockPaperScissors {
     public static void main(String[] args) {
+        String playAgain = "yes";
+         while (playAgain.equals("yes")){
+        Scanner input = new Scanner(System.in);
         int rounds;
-        int maxRounds = 10;
-        int minRounds = 1;
-        int rock = 1;
-        int paper = 2;
-        int scissors = 3;
-        int choice;
-        
         System.out.println("How many rounds would you like to play? Minimum to start is 1, Max is 10.");
         rounds = howManyRounds();
         System.out.println("Choose rock, paper, scissors.  Type 1 for rock, 2 for paper, and 3 for scissors");
         runsGames(rounds);
+        System.out.println("Would you like to play again yes/no");
+        playAgain = input.nextLine().toLowerCase();
+            
+        }
+        
     }
     public static int howManyRounds(){
         Scanner roundChoice = new Scanner(System.in);
@@ -41,15 +42,16 @@ public class RockPaperScissors {
         }
     
     public static void runsGames(int roundsChosen){
-        Scanner choiceOfRPS = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         Random rng = new Random();
         int wins = 0;
         int ties = 0;
         int computerWins = 0;
         int pick;
         int computerChoice;
+        String playAgain;
         for(int i = 1; i <= roundsChosen; i++){
-            pick = choiceOfRPS.nextInt();
+            pick = input.nextInt();
             computerChoice = rng.nextInt(3) + 1;
             System.out.println("Computer chooses " + computerChoice);
             if (pick == 1 && computerChoice == 1 || pick == 2 &&
@@ -71,6 +73,5 @@ public class RockPaperScissors {
         } else {
             System.out.println("It's a tie");
         }
+            }
     }
-
-}
